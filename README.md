@@ -4,8 +4,8 @@ A lightweight terminal-based database application built using **Object-Oriented 
 
 ## 🚀 Features
 - **Data Persistence:** Uses standard file handling (`std::ifstream` and `std::ofstream`) to save data permanently into a `.txt` database file.
-- **Dynamic Memory Management:** Leverages C++ Standard Template Library (`std::vector`) to handle arrays dynamically.
-- **Encapsulation:** Uses secure classes, objects, and abstraction to enforce clean code architecture.
+- **Dynamic Record Storage with std::vector:** Leverages C++ Standard Template Library (`std::vector`) to handle arrays dynamically.
+- **Encapsulation:** Uses encapsulation to restrict direct access to student data, objects, and abstraction to enforce clean code architecture.
 
 ## 🛠️ Tech Stack
 - **Language:** C++11 or higher
