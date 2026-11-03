@@ -75,13 +75,13 @@ public:
 
         students.push_back(Student(id, name, gpa));
         saveToFile(); // Save immediately
-        cout << "\n🎉 Student successfully added and saved to database!\n";
+        cout << "\n Student successfully added and saved to database!\n";
     }
 
     // Display all students
     void viewAllStudents() {
         if (students.empty()) {
-            cout << "\n⚠️ No records found in the database.\n";
+            cout << "\n No records found in the database.\n";
             return;
         }
         cout << "\n--- Student Records Directory ---\n";
@@ -118,7 +118,7 @@ int main() {
                 cout << "\nThank you for using the system. Goodbye!\n";
                 break;
             default:
-                cout << "\n⚠️ Invalid choice. Please try again.\n";
+                cout << "\n Invalid choice. Please try again.\n";
         }
     } while (choice != 3);
 
