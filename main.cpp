@@ -3,11 +3,11 @@
 #include <fstream>
 #include <string>
 
-using namespace std;
+  using namespace std;
 
 // Class representing an individual student
 class Student {
-private:
+  private:
     string id;
     string name;
     double gpa;
@@ -33,17 +33,17 @@ public:
 
 // Main System Class to manage students
 class RecordSystem {
-private:
+      private:
     vector<Student> students;
     string filename = "students_database.txt";
 
-public:
+ public:
     // Load existing records from a file when the program starts
     void loadFromFile() {
         ifstream file(filename);
         if (!file.is_open()) return;
 
-        string id, name;
+         string id, name;
         double gpa;
         while (file >> id >> ws && getline(file, name, ',') && file >> gpa) {
             students.push_back(Student(id, name, gpa));
@@ -52,7 +52,7 @@ public:
     }
 
     // Save records to a file
-    void saveToFile() {
+   void saveToFile() {
         ofstream file(filename);
         for (size_t i = 0; i < students.size(); ++i) {
             file << students[i].getId() << " " << students[i].getName() << "," << students[i].getGpa() << "\n";
@@ -69,12 +69,12 @@ public:
         cin >> id;
         cout << "Enter Full Name: ";
         cin.ignore();
-        getline(cin, name);
+          getline(cin, name);
         cout << "Enter Cumulative GPA: ";
         cin >> gpa;
 
         students.push_back(Student(id, name, gpa));
-        saveToFile(); // Save immediately
+      saveToFile(); // Save immediately
         cout << "\n Student successfully added and saved to database!\n";
     }
 
@@ -88,6 +88,7 @@ public:
         for (size_t i = 0; i < students.size(); ++i) {
             students[i].display();
         }
+       
         cout << "---------------------------------\n";
     }
 };
@@ -107,7 +108,7 @@ int main() {
         cout << "\nEnter your choice (1-3): ";
         cin >> choice;
 
-        switch (choice) {
+           switch (choice) {
             case 1:
                 system.addStudent();
                 break;
